@@ -15,3 +15,7 @@ from product
 join orderDetail on product.id = orderDetail.productId
 where orderDetail.orderId = 10251;
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
+select [order].id, customer.companyName, employee.LastName
+from [order]
+join customer on customer.id = [order].customerId
+join employee on employee.id = [order].employeeId;
